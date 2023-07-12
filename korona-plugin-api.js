@@ -265,6 +265,16 @@ korona_plugin_api = new function() {
 			return this;
 		};
 
+		this.setLoyaltyNumber = function(paramObj) {
+			this.actions.push({
+			  type: 'setLoyaltyCardNumberAction',
+			  loyaltyCardNumber: paramObj.loyaltyCardNumber
+			});
+			this.modified.notify();
+			return this;
+		  };
+		  
+
 		this.setReceiptInfotexts = function(paramObj) {
 			if (typeof paramObj === 'string') {
 				paramObj = {infoTexts: [ paramObj ]};
