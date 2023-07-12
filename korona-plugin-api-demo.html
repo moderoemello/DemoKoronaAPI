@@ -722,6 +722,14 @@
 			return false;
 		}
 
+		function submitSetLoyaltyNumber(form) {
+		const loyaltyNumber = form.amount.value;
+		korona_plugin_api.setLoyaltyNumber({ loyaltyCardNumber: loyaltyNumber });
+		form.reset();
+		return false;
+		}		
+
+
 		function submitSetReceiptCustomData(form) {
 			korona_plugin_api.response.setReceiptCustomData({
 				customData: emptyToNull(form.customData.value)
@@ -910,7 +918,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#collapse15">Set receipt discount</a>
+							<a data-toggle="collapse" href="#collapse15">Set Loyalty Number</a>
 						</h4>
 					</div>
 					<div class="panel-collapse collapse" id="collapse15">
@@ -941,19 +949,6 @@
 					</div>
 				</div>
 			</div>
-
-			<h2>Remove actions</h2>
-			<form class="form-inline" name="startActions" action="" onsubmit="korona_plugin_api.response.startActions(); return false;">
-				<div class="form-group">
-					<label class="sr-only" for="actions">Actions</label>
-					<select class="form-control" name="actions"></select>
-				</div>
-				<button class="btn btn-default" type="button" onclick="korona_plugin_api.response.removeAction(document.startActions.actions.selectedIndex);">Remove selected</button>
-				<button class="btn btn-warning" type="submit">Remove all</button>
-				<p></p>
-			</form>
-
-			<hr />
 
 			<h1>Response</h1>
 
