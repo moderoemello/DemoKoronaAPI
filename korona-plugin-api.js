@@ -178,17 +178,6 @@ korona_plugin_api = new function() {
 			return this;
 		};
 
-		this.setLoyaltyNumber = function(paramObj) {
-			if (typeof paramObj === 'string')
-				paramObj = {loyaltyNumber: paramObj};
-			this.actions.push({
-				type: 'setLoyaltyCardNumberAction',
-				loyaltyNumber: paramObj.loyaltyNumber
-			});
-			this.modified.notify();
-			return this;
-		};
-		
 		this.removeReceiptItem = function(paramObj) {
 			if (typeof paramObj === 'string')
 				paramObj = {modifier: parseInt(paramObj)};
@@ -352,6 +341,18 @@ korona_plugin_api = new function() {
 			this.actions.push({
 				type: 'setReceiptOrderNumberAction',
 				orderNumber: paramObj.orderNumber
+			});
+			this.modified.notify();
+			return this;
+		};
+
+
+		this.setLoyaltyCardNumber = function(paramObj) {
+			if (typeof paramObj === 'string')
+				paramObj = {orderNumber: paramObj};
+			this.actions.push({
+				type: 'setLoyaltyCardNumberAction',
+				loyaltyCardNumber: paramObj.loyaltyCardNumber
 			});
 			this.modified.notify();
 			return this;
