@@ -351,7 +351,7 @@ korona_plugin_api = new function() {
 			if (typeof paramObj === 'string')
 				paramObj = {orderNumber: paramObj};
 			this.actions.push({
-				type: 'setLoyaltyCardNumberAction',
+				type: 'modifyReceiptAction',
 				loyaltyCardNumber: paramObj.loyaltyCardNumber
 			});
 			this.modified.notify();
