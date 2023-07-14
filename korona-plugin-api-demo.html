@@ -912,39 +912,52 @@
 
 <body>
 
-	<div class="container-fluid">
+	<div class="container">
 		<h2>Enter your loyalty number</h2>
 		<div class="panel-group">
-			
-					<div class="panel-heading">
-						<h4 class="panel-title">
-							<h2>Set Loyalty Card Number</a>
-						</h4>
-					</div>
-					
-						<div class="panel-body">
-							<form class="form" name="setLoyaltyCardNumber" action="" onsubmit="return submitSetLoyaltyCardNumber(document.setLoyaltyCardNumber);">
-								<div class="row">
-									<div class="col-xs-4">
-										<div class="form-group">
-											<label class="sr-only" for="customData">Loyalty number</label>
-											<input class="form-control" type="text" name="loyaltyCardNumber" placeholder="Loyalty number"></input>
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-xs-12">
-										<div class="form-group">
-											<button class="btn btn-primary" type="submit">Submit</button>
-										</div>
-									</div>
-								</div>
-							</form>
+			<div class="panel-body">
+				<form class="form" name="setLoyaltyCardNumber" action="" onsubmit="return submitSetLoyaltyCardNumber(document.setLoyaltyCardNumber);">
+					<div class="row">
+						<div class="col-xs-4">
+							<div class="form-group">
+								<label class="sr-only" for="customData">Loyalty number</label>
+								<input class="form-control" type="text" name="loyaltyCardNumber" id="loyaltyCardNumber" placeholder="Loyalty number"></input>
+							</div>
 						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="form-group">
+								<button class="btn btn-primary" type="submit">Submit</button>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
-
+		</div>
+		<div class="keypad">
+			<button class="btn btn-default keypad-button" data-key="1">1</button>
+			<button class="btn btn-default keypad-button" data-key="2">2</button>
+			<button class="btn btn-default keypad-button" data-key="3">3</button>
+			<button class="btn btn-default keypad-button" data-key="4">4</button>
+			<button class="btn btn-default keypad-button" data-key="5">5</button>
+			<button class="btn btn-default keypad-button" data-key="6">6</button>
+			<button class="btn btn-default keypad-button" data-key="7">7</button>
+			<button class="btn btn-default keypad-button" data-key="8">8</button>
+			<button class="btn btn-default keypad-button" data-key="9">9</button>
+			<button class="btn btn-default keypad-button" data-key="clear">Clear</button>
+			<button class="btn btn-default keypad-button" data-key="0">0</button>
+			<button class="btn btn-default keypad-button" data-key="backspace">&larr;</button>
+		</div>
+	</div>
+			<div class="hidden-div">
 			<form class="form-inline" name="startActions" action="" onsubmit="korona_plugin_api.response.startActions(); return false;">
-
+				<div class="form-group">
+					<label class="sr-only" for="actions">Actions</label>
+					<select class="form-control" name="actions"></select>
+				</div>
+				<button class="btn btn-default" type="button" onclick="korona_plugin_api.response.removeAction(document.startActions.actions.selectedIndex);">Remove selected</button>
+				<p></p>
 			</form>
 
 			<hr />
@@ -961,6 +974,8 @@
 			</form>
 			<p></p>
 		</div>
+		</div>
+		<script src="keyboard.js"></script>
 </body>
 
 </html>
