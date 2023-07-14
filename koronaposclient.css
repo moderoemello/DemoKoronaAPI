@@ -9,7 +9,7 @@ body {
 	text-align: center;
 	padding-top: 50px;
   }
-
+/*
   .form-control {
 	width: 300px;
 	height: auto;
@@ -28,7 +28,7 @@ body {
 	margin-top: 0;
   }
   .loyalty-number {
-	font-size: 24px;
+	font-size: 50px;
 	font-weight: bold;
 	margin-bottom: 20px;
   }
@@ -54,19 +54,4 @@ body {
   .keypad button:active {
 	background-color: #3e8e41;
   }
-  .actions button {
-	width: 100%;
-	height: 40px;
-	font-size: 16px;
-	border-radius: 3px;
-	border: none;
-	background-color: #2196f3;
-	color: #fff;
-	cursor: pointer;
-  }
-  .actions button:hover {
-	background-color: #1e87dc;
-  }
-  .actions button:active {
-	background-color: #1976d2;
-  }
+  */
