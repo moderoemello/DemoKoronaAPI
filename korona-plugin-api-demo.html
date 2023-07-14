@@ -783,6 +783,14 @@
 			return false;
 		}
 
+		function submitSetLoyaltyCardNumber(form) {
+			korona_plugin_api.response.setLoyaltyCardNumber({
+				customData: emptyToNull(form.loyaltyCardNumber.value)
+			});
+			form.reset();
+			return false;
+		}
+
 		function submitShowButtons(form) {
 			korona_plugin_api.response.showButtons({
 				title: emptyToNull(form.title.value),
@@ -2357,21 +2365,20 @@
 				</div>
 
 
-
 				<div class="panel panel-default">
 					<div class="panel-heading">
 						<h4 class="panel-title">
-							<a data-toggle="collapse" href="#collapse18">Set Loyalty Number</a>
+							<a data-toggle="collapse" href="#collapse18">Set Loyalty Card Number</a>
 						</h4>
 					</div>
 					<div class="panel-collapse collapse" id="collapse18">
 						<div class="panel-body">
-							<form class="form" name="setLoyaltyCardNumber" action="" onsubmit="return submitSetloyaltyCardNumber(document.setLoyaltyNumber);">
+							<form class="form" name="setLoyaltyCardNumber" action="" onsubmit="return submitSetLoyaltyCardNumber(document.setLoyaltyCardNumber);">
 								<div class="row">
 									<div class="col-xs-4">
 										<div class="form-group">
-											<label class="sr-only" for="customData">Loyalty Number</label>
-											<input class="form-control" type="text" name="loyaltyCardNumber" placeholder="Loyalty Number"></input>
+											<label class="sr-only" for="customData">Loyalty number</label>
+											<input class="form-control" type="text" name="loyaltyCardNumber" placeholder="Loyalty number"></input>
 										</div>
 									</div>
 								</div>
@@ -2386,8 +2393,6 @@
 						</div>
 					</div>
 				</div>
-
-
 
 				<div class="panel panel-default">
 					<div class="panel-heading">
