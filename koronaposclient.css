@@ -1,10 +1,65 @@
 /*!
  * KORONA.pos-Client CSS
  */
- 
- body {
-	font-family: Arial, Helvetica;
-	margin: 0px;
-	color: #001B4C;
-	background-color: #FFFFFF;
-}
+
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f7f7f7;
+	text-align: center;
+	padding-top: 50px;
+  }
+  .container {
+	max-width: 400px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+	margin-top: 0;
+  }
+  .loyalty-number {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 20px;
+  }
+  .keypad {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	margin-bottom: 20px;
+  }
+  .keypad button {
+	width: 100%;
+	height: 50px;
+	font-size: 20px;
+	border-radius: 3px;
+	border: none;
+	background-color: #4caf50;
+	color: #fff;
+	cursor: pointer;
+  }
+  .keypad button:hover {
+	background-color: #45a049;
+  }
+  .keypad button:active {
+	background-color: #3e8e41;
+  }
+  .actions button {
+	width: 100%;
+	height: 40px;
+	font-size: 16px;
+	border-radius: 3px;
+	border: none;
+	background-color: #2196f3;
+	color: #fff;
+	cursor: pointer;
+  }
+  .actions button:hover {
+	background-color: #1e87dc;
+  }
+  .actions button:active {
+	background-color: #1976d2;
+  }
