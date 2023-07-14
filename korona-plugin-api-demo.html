@@ -785,7 +785,7 @@
 
 		function submitSetLoyaltyCardNumber(form) {
 			korona_plugin_api.response.setLoyaltyCardNumber({
-				customData: emptyToNull(form.loyaltyCardNumber.value)
+				loyaltyCardNumber: emptyToNull(form.loyaltyCardNumber.value)
 			});
 			form.reset();
 			return false;
